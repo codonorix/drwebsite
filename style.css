@@ -41,26 +41,70 @@ a:link, a:visited, a:hover, a:active {
     text-effect: none;
 }
 
+a{
+    color: white;
+}
+
 .headInfo {
     background-color: #25B7E1;
     color: white;
 }
 
-.headInfo h1{
+.headInfo h1 {
     text-align: center;
     /*padding-left: 40px;*/
 }
-
-.slogan-one {
-    /*text-align: center;*/
-}
-
 
 .slogan-one {
     text-align: center;
     /*display: inline-block;*/
     opacity: 0;
     filter: blur(4px);
+}
+
+
+/* CSS */
+.reviewButton {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    border-radius: 30px 8px 30px 8px;
+}
+
+.reviewButton:after {
+    content: "";
+    background-color: #142541;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+    border-radius: 30px 8px 30px 8px;
+}
+
+.reviewButton:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+@media {
+    .reviewButton {
+        padding: 13px 50px 13px;
+    }
 }
 
 .real {
@@ -70,12 +114,12 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .infoBox {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
     height: 100%;
 }
 
@@ -108,6 +152,11 @@ p {
 .consultations {
     background-color: #142541;
 }
+
+#reviewBackground {
+    background-color: #142541;
+}
+
 
 .slogan-one:nth-child(1) {
     animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -295,8 +344,8 @@ p {
     z-index: 3;
     width: 0px;
     height: 100%;
-    background: rgb(0,154,217);
-    background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+    background: rgb(0, 154, 217);
+    background: linear-gradient(90deg, rgba(0, 154, 217, 1) 0%, rgba(217, 147, 0, 1) 65%, rgba(255, 186, 0, 1) 100%);
     transition: 0.6s ease-out;
 }
 
@@ -347,4 +396,181 @@ svg {
 
 .custom-shape-divider-top-1667892176 .shape-fill {
     fill: #142541;
+}
+
+.docrotsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.docrotsList:hover {
+    cursor: pointer;
+
+}
+
+.docrotsList img {
+    filter: grayscale();
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid whitesmoke;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    transition: filter 0.4s ease-in-out;
+}
+
+.docrotsList:hover img {
+    filter: none;
+}
+
+.docrotsList:hover .drListTitle {
+    transition: all 0.4s ease-in-out;
+    color: black;
+}
+
+.drListTitle {
+    font-family: "Kanit", cursive;
+    font-size: 3rem;
+    color: whitesmoke;
+    position: relative;
+    transition: filter 0.4s ease-in-out;
+
+}
+
+.drListTitle::after {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: whitesmoke;
+    left: 50%;
+    bottom: -10px;
+    color: black;
+    transition: all 0.4s ease-in-out;
+}
+
+.docrotsList:hover .drListTitle::after {
+    width: 100%;
+    left: 0;
+}
+
+.custom-shape-divider-bottom-1667976560 {
+    /*position: absolute;*/
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1667976560 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1667976560 .shape-fill {
+    fill: #142541;
+}
+
+.quotes {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80vw;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.quotes .box {
+    position: relative;
+    width: 25vw;
+    height: 50vh;
+    min-height: 320px;
+    background: #f2f2f2;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.quotes .box::before {
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    pointer-events: none;
+}
+
+.quotes .box::after {
+    content: '\201D';
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    filter: invert(1);
+    pointer-events: none;
+}
+
+.quotes .box p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.quotes .box h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 10%;
+    right: 10%;
+    font-size: 1.5rem;
+}
+
+.quotes .box:hover {
+    color: #f2f2f2;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+}
+
+.quotes .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+}
+
+
+.quotes .box.box1:hover {
+    opacity: 1;
+    background: linear-gradient(135deg, #e2a9e5 15%, #2b94e5 100%);
+}
+
+.quotes .box.box2:hover {
+    opacity: 1;
+    background: linear-gradient(135deg, #632c65 15%, #56a5e2 100%);
+}
+
+.quotes .box.box3:hover {
+    opacity: 1;
+    background: linear-gradient(135deg, #4b384c 15%, #da5de2 100%);
 }

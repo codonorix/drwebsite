@@ -20,13 +20,13 @@
         </div>
         <div class="col-md-4"></div>
         <div class="col-md">
-            <div class="nav-button"><a href="#aboutUs">About us</a></div>
+            <a href="#aboutUs"><div class="nav-button">About us</div></a>
         </div>
         <div class="col-md">
-            <div class="nav-button">Consultations</div>
+            <a href="#consultations"><div class="nav-button">Consultations</div></a>
         </div>
         <div class="col-md">
-            <div class="nav-button">Our Doctors</div>
+            <a href="#doctors"><div class="nav-button">Our Doctors</div></a>
         </div>
         <div class="col-md">
             <div class="nav-button">Contact Us</div>
@@ -40,6 +40,11 @@
             <h2 class="slogan-one">Keeping it <span class="real">real</span>,</h2>
             <h2 class="slogan-one">because <span class="real">you</span> are.</h2>
             <br><br>
+            <a href="#reviews">
+                <div class="slogan-one reviewButton">
+                    Reviews
+                </div>
+            </a>
         </div>
         <div class="col-md">
             <img src="images/newdoc.gif">
@@ -120,7 +125,7 @@
     </svg>
 </div>
 <div class="container-fluid">
-    <div class="row consultations paddingBottom">
+    <div class="row consultations paddingBottom" id="consultations">
         <div class="CardContainer">
             <div class="card">
                 <h3 class="title">Online Consultation</h3>
@@ -184,9 +189,67 @@
     </svg>
 </div>
 <div class="container-fluid">
-    <div class="row">
-        <h2>test</h2>
+    <div class="row" id="doctors">
+        <h2>Our Doctors</h2>
+        <br>
+        <div class="col-md"></div>
+        <div class="col-md-3">
+            <div class="docrotsList">
+                <img src="images/doctor.png"/>
+                <div class="drListTitle">Dr Meyer</div>
+            </div>
+        </div>
+        <div class="col-md"></div>
     </div>
 </div>
+<div class="custom-shape-divider-bottom-1667976560">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+              opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+              opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+              class="shape-fill"></path>
+    </svg>
+</div>
+<div class="container-fluid" id="reviewBackground">
+    <div class="row" id="reviews">
+        <h2>Reviews</h2>
+    </div>
+    <div class="row">
+        <div class="quotes">
+            <div class="reviewCard">
+                <div class="box box1">
+                    <p>Dr Meyer is a brilliant doctor. From my first-ever appointment with him, he always listens to
+                        everything I have to say. He also does a brilliant job at explaining everything from your
+                        diagnosis to why he's giving you certain medications. You always leave his room feeling upbeat
+                        and positive and feel like you have a good direction on what to do once you leave. Would
+                        recommend him any day. 11/10 </p>
+                    <h2>Logan</h2>
+                </div>
+                <div class="bg"></div>
+            </div>
+            <div class="reviewCard">
+                <div class="box box2">
+                    <p>Dr. Meyer is absolutely outstanding. My kids have always been back to a GP more than once for the
+                        same problem and Dr. Meyer sorted them out with the 1st round of meds. Dr explained everything
+                        in detail, step by step about their illnesses and how every medicine works and how to correctly
+                        medicate them to get them better quicker. 3 days and my kids were better! I say he is the Child
+                        Whisperer! </p>
+                    <h2>Sasha</h2>
+                </div>
+                <div class="bg"></div>
+            </div>
+            <div class="reviewCard">
+                <div class="box box3">
+                    <p>Doctor make better, very wow</p>
+                    <h2>Bob</h2>
+                </div>
+                <div class="bg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js" rel="script"></script>
 </body>
 </html>
